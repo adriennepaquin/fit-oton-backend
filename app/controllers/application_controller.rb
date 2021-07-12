@@ -15,7 +15,21 @@ class ApplicationController < Sinatra::Base
   end
 
   # method "URL" do
-    
+    get '/' do
+      "hello world"
+      usernames = User.all.map{|user| user.name}
+      usernames.to_json
+    end
+
+    get '/workouts' do
+      workouts = Workout.all
+      workouts.to_json
+    end
+
+    get '/users' do
+      users = User.all
+      users.to_json
+    end
   # end
 
 end
