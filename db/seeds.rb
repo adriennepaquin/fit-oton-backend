@@ -37,7 +37,7 @@ puts "Creating instructors..."
 end
 
 puts "Creating users..."
-10.times do
+20.times do
     User.create(
         name: Faker::TvShows::GameOfThrones.character,
         username: Faker::Internet.username
@@ -45,7 +45,7 @@ puts "Creating users..."
 end
 
 puts "Creating taken_classes..."
-20.times do
+30.times do
     TakenClass.create(
         workout_id: rand(1..40),
         user_id: rand(1..20)
